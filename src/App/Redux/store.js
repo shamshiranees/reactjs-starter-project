@@ -7,8 +7,8 @@ import { composeWithDevTools } from "redux-devtools-extension"
 
 const logger = createLogger()
 const releaseMiddleware = [apiMiddleware, thunk]
-//const devMiddleware = [...releaseMiddleware, logger];
-const selectedMiddleware = releaseMiddleware
+const devMiddleware = [...releaseMiddleware, logger];
+const selectedMiddleware = devMiddleware
 
 const store = createStore(
   rootReducer,
